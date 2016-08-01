@@ -31,8 +31,8 @@
                      </HBox.margin>
                   </TextField>
                   <PasswordField fx:id="pfPassword" promptText="Password" />
-                  <Button mnemonicParsing="false" onAction="#signInPressed" text="Sign In" />
-                  <Button layoutX="184.0" layoutY="10.0" mnemonicParsing="false" onAction="#signOutPressed" text="Sign Out" />
+                  <Button mnemonicParsing="false" text="Sign In" />
+                  <Button layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="Sign Out" />
                   <Region HBox.hgrow="ALWAYS" />
                   <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#signUpPressed" text="Sign Up" />
                </children>
@@ -54,7 +54,7 @@
         </rowConstraints>
          <children>
             <TextField promptText="Enter Product Name" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#searchPressed" prefHeight="27.0" prefWidth="96.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ListView prefHeight="544.0" prefWidth="272.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="284.0" text="Product Search" GridPane.columnSpan="2">
                <font>
@@ -169,8 +169,8 @@
                   <Insets />
                </GridPane.margin>
                <children>
-                  <Button mnemonicParsing="false" onAction="#clearPressed" prefHeight="57.0" prefWidth="114.0" text="Clear" GridPane.columnIndex="2" />
-                  <Button layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#submitPressed" prefHeight="58.0" prefWidth="122.0" text="Submit" GridPane.columnIndex="3" />
+                  <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="114.0" text="Clear" GridPane.columnIndex="2" />
+                  <Button layoutX="10.0" layoutY="79.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="122.0" text="Submit" GridPane.columnIndex="3" />
                </children>
             </GridPane>
             <GridPane hgap="7.0" vgap="7.0" GridPane.rowIndex="1">
