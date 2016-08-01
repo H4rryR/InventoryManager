@@ -18,7 +18,6 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 	
 		try {
-//			BorderPane root = new BorderPane();
 			Parent root = FXMLLoader.load(getClass().getResource("/application/InventoryManager.fxml"));
 			Scene scene = new Scene(root, 751, 754);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
