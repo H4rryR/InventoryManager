@@ -31,7 +31,7 @@
                      </HBox.margin>
                   </TextField>
                   <PasswordField fx:id="pfPassword" promptText="Password" />
-                  <Button mnemonicParsing="false" text="Sign In" />
+                  <Button fx:id="btnSignIn" mnemonicParsing="false" onAction="#signInPressed" text="Sign In" />
                   <Button layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="Sign Out" />
                   <Region HBox.hgrow="ALWAYS" />
                   <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#signUpPressed" text="Sign Up" />
