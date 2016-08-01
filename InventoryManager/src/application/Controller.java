@@ -31,7 +31,7 @@ public class Controller {
 		} else if (main.username.length() >= 5) {
 			lblOtherAlert.setText("PASSWORD MUST BE 8 CHARACTERS OR LONGER");
 			
-		} else if (main.password.length() >= 5) {
+		} else if (main.password.length() >= 8) {
 			lblOtherAlert.setText("USERNAME MUST BE 5 CHARACTERS OR LONGER");
 			
 		} else if (main.username.length() < 5 && main.password.length() < 8) {
