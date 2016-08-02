@@ -57,6 +57,8 @@ public class SignIn {
 		
 		if (userSecure) {
 			lblOtherAlert.setText("Signed in successfully");
+		} else {
+			lblOtherAlert.setText("Username or password was incorrect");
 		}
 		
 		return;
