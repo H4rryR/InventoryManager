@@ -13,9 +13,9 @@ public class SignIn {
 	private int userIndex;
 	private boolean usernameAuth;
 	private boolean passwordAuth;
-	public boolean userSecure;
+	private boolean userSecure;
 
-	public void signIn(TextField tfUsername, PasswordField pfPassword, Label lblOtherAlert, ArrayList<String> usernames, ArrayList<String> passwords) {
+	public boolean signIn(TextField tfUsername, PasswordField pfPassword, Label lblOtherAlert, ArrayList<String> usernames, ArrayList<String> passwords) {
 		
 		System.out.println("Sign In was pressed");
 		
@@ -61,6 +61,6 @@ public class SignIn {
 			lblOtherAlert.setText("Username or password was incorrect");
 		}
 		
-		return;
+		return userSecure;
 	}	
 }

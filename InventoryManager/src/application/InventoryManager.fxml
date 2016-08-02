@@ -32,7 +32,7 @@
                   </TextField>
                   <PasswordField fx:id="pfPassword" promptText="Password" />
                   <Button fx:id="btnSignIn" mnemonicParsing="false" onAction="#signInPressed" text="Sign In" />
-                  <Button layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="Sign Out" />
+                  <Button fx:id="btnSignOut" layoutX="184.0" layoutY="10.0" mnemonicParsing="false" onAction="#signOutPressed" text="Sign Out" />
                   <Region HBox.hgrow="ALWAYS" />
                   <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#signUpPressed" text="Sign Up" />
                </children>
