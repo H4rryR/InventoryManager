@@ -92,28 +92,28 @@ public class Controller {
 		return;
 	}
 	@FXML
-	public String newProductNameEntered() {
+	public String newProductNameEntered() {							// TODO - change when this method is called in SceneBuilder
 		newProductName = p.getNewProductName(tfNewProductName);
 		return newProductName;
 	}
 	@FXML
-	public double newProductPriceEntered() {
+	public double newProductPriceEntered() {						// TODO - change when this method is called in SceneBuilder
 		newProductPrice = p.getNewProductPrice(tfNewProductPrice);
 		return newProductPrice;
 	}
 	@FXML
-	public String newProductIDEntered() {
+	public String newProductIDEntered() {							// TODO - change when this method is called in SceneBuilder
 		newProductID = p.getNewProductID(tfNewProductID);
 		return newProductID;
 	}
 	@FXML
-	public int newProductQuantityEntered() {
+	public int newProductQuantityEntered() {						// TODO - change when this method is called in SceneBuilder
 		newProductQuantity = p.getNewProductQuantity(tfNewProductQuantity);
 		return newProductQuantity;
 	}
 	@FXML
 	public void submitPressed() {
-		i.updateProductListAndDataArrays(newProductName, newProductPrice, newProductID, newProductQuantity);
+		i.updateProductLists(newProductName, newProductPrice, newProductID, newProductQuantity);
 	}
 	@FXML
 	public void clearPressed() {
