@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import java.util.ArrayList;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 
 public class Controller {
@@ -37,16 +38,16 @@ public class Controller {
 	@FXML private Label lblStoredProductID;
 	@FXML private Label lblStoredProductQuantity;
 	
-	@FXML private ListView<String> lvProductNames = new ListView<>();
+	@FXML private ListView<String> lvProductNames = new ListView<String>();
 	
 	private ArrayList<String> usernames = new ArrayList<String>();
 	private ArrayList<String> passwords = new ArrayList<String>();
+	private ObservableList<String> productNamesList;	
 	private boolean userSecure;
 	private String productName;
-	private String selectedProductName;
 	private String newProductName;
 	private double newProductPrice;
-	private long newProductID;
+	private String newProductID;
 	private int newProductQuantity;
 
 	private SignUp su = new SignUp();
@@ -56,63 +57,65 @@ public class Controller {
 	private Inventory i = new Inventory();
 	private Other o = new Other();
 	
+	@FXML
 	public void signUpPressed() {
 		su.signUp(tfUsername, pfPassword, lblOtherAlert, usernames, passwords);
 	}
-	
+	@FXML
 	public boolean signInPressed() {
 		return si.signIn(tfUsername, pfPassword, lblOtherAlert, usernames, passwords);
 	}
-	
+	@FXML
 	public void signOutPressed() {
 		so.signOut(lblOtherAlert, userSecure);
 	}
-	
+	@FXML
 	public void updatePressed() {
-		p.displayInventoryItems(lvProductNames);
+		i.displayInventoryItemNames(lvProductNames, productNamesList);
 	}
-	
+	@FXML
 	public void calculatePressed() {
 		i.calcTotalInventoryValue(); 
 	}
-	
-	public void productNameEntered() {		//Called every time a letter is entered into the Search TextField.
+	@FXML
+	public void productNameEntered() {
 		p.getProductName(tfSearch);
 		p.selectProductName(productName);
 	}
-	
+	@FXML
 	public void searchPressed() {
 		p.getProductName(tfSearch);
 	}
-	
+	@FXML
 	public void productSelected() {
-		p.getSelectedProductsNameAndDisplayData();
+		i.getSelectedProductsNameAndDisplayData(lvProductNames, productNamesList);
 		return;
 	}
-	
+	@FXML
 	public String newProductNameEntered() {
-		return p.getNewProductName(tfNewProductName);
+		newProductName = p.getNewProductName(tfNewProductName);
+		return newProductName;
 	}
-	
+	@FXML
 	public double newProductPriceEntered() {
-		return p.getNewProductPrice(tfNewProductPrice);
+		newProductPrice = p.getNewProductPrice(tfNewProductPrice);
+		return newProductPrice;
 	}
-	
-	public long newProductIDEntered() {
-		return p.getNewProductID(tfNewProductID);
+	@FXML
+	public String newProductIDEntered() {
+		newProductID = p.getNewProductID(tfNewProductID);
+		return newProductID;
 	}
-	
+	@FXML
 	public int newProductQuantityEntered() {
-		return p.getNewProductQuantity(tfNewProductQuantity);
+		newProductQuantity = p.getNewProductQuantity(tfNewProductQuantity);
+		return newProductQuantity;
 	}
-	
+	@FXML
 	public void submitPressed() {
-		/* 
-		 * TODO get new product data from new product details area.
-		 * TODO update the product data list with these details.
-		 */
+		i.updateProductListAndDataArrays(newProductName, newProductPrice, newProductID, newProductQuantity);
 	}
-	
+	@FXML
 	public void clearPressed() {
 		o.clearFields(tfNewProductName, tfNewProductPrice, tfNewProductID, tfNewProductQuantity, tfSearch, lblStoredProductName, 
 				lblStoredProductPrice, lblStoredProductID, lblStoredProductQuantity);
