@@ -145,16 +145,16 @@
                   <Label prefHeight="17.0" prefWidth="236.0" text="Product Price:" GridPane.rowIndex="2" />
                   <Label layoutX="10.0" layoutY="28.0" prefHeight="17.0" prefWidth="265.0" text="Product Quantity:" GridPane.rowIndex="4" />
                   <Label layoutX="10.0" layoutY="28.0" prefHeight="17.0" prefWidth="292.0" text="Product ID:" GridPane.rowIndex="3" />
-                  <TextField fx:id="tfNewProductPrice" onAction="#newProductPriceEntered" promptText="Enter Price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="tfNewProductID" layoutX="157.0" layoutY="17.0" onAction="#newProductIDEntered" promptText="Enter ID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="tfNewProductQuantity" layoutX="157.0" layoutY="64.0" onAction="#newProductQuantityEntered" promptText="Enter Quantity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="tfNewProductPrice" onKeyReleased="#newProductPriceEntered" promptText="Enter Price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="tfNewProductID" layoutX="157.0" layoutY="17.0" onKeyReleased="#newProductIDEntered" promptText="Enter ID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfNewProductQuantity" layoutX="157.0" layoutY="64.0" onKeyReleased="#newProductQuantityEntered" promptText="Enter Quantity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Label alignment="CENTER" prefHeight="17.0" prefWidth="459.0" text="New Product Details" GridPane.columnSpan="2">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
                   <Label layoutX="10.0" layoutY="122.0" prefHeight="17.0" prefWidth="236.0" text="Product Name:" GridPane.rowIndex="1" />
-                  <TextField fx:id="tfNewProductName" layoutX="241.0" layoutY="117.0" onAction="#newProductNameEntered" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfNewProductName" layoutX="241.0" layoutY="117.0" onKeyReleased="#newProductNameEntered" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
                <GridPane.margin>
                   <Insets bottom="7.0" />

@@ -75,7 +75,7 @@ public class Controller {
 	}
 	@FXML
 	public void calculatePressed() {
-		i.calcTotalInventoryValue(); 
+		i.calcTotalInventoryValue(lblTotalInventoryValue); 
 	}
 	@FXML
 	public void productNameEntered() {
@@ -92,22 +92,22 @@ public class Controller {
 		return;
 	}
 	@FXML
-	public String newProductNameEntered() {							// TODO - change when this method is called in SceneBuilder
+	public String newProductNameEntered() {
 		newProductName = p.getNewProductName(tfNewProductName);
 		return newProductName;
 	}
 	@FXML
-	public double newProductPriceEntered() {						// TODO - change when this method is called in SceneBuilder
+	public double newProductPriceEntered() {
 		newProductPrice = p.getNewProductPrice(tfNewProductPrice);
 		return newProductPrice;
 	}
 	@FXML
-	public String newProductIDEntered() {							// TODO - change when this method is called in SceneBuilder
+	public String newProductIDEntered() {
 		newProductID = p.getNewProductID(tfNewProductID);
 		return newProductID;
 	}
 	@FXML
-	public int newProductQuantityEntered() {						// TODO - change when this method is called in SceneBuilder
+	public int newProductQuantityEntered() {
 		newProductQuantity = p.getNewProductQuantity(tfNewProductQuantity);
 		return newProductQuantity;
 	}

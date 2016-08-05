@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 public class Inventory {
@@ -32,15 +33,15 @@ public class Inventory {
 		return;
 	}
 	
-	public double calcTotalInventoryValue() {
+	public void calcTotalInventoryValue(Label lblTotalInventoryValue) {
 		
-		/*
-		 *  TODO - get all of the product prices.
-		 *  TODO - get all of the product quantities.
-		 *  TODO - calculate the total value of the inventory.
-		 */
+		totalInventoryValue = 0;
 		
-		return totalInventoryValue;
+		for (double price : productPrices) {
+			totalInventoryValue += (price * productQuantities.get(productPrices.indexOf(price)));
+		}
+		lblTotalInventoryValue.setText(String.valueOf(totalInventoryValue)); 
+		return;
 	}
 	
 }
