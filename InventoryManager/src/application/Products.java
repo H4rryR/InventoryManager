@@ -31,7 +31,7 @@ public class Products {
 	
 	public double getNewProductPrice(TextField tfNewProductPrice) {
 		
-		newProductPrice = Other.round(Double.parseDouble(tfNewProductPrice.getText()), 2); //TODO - This was changed
+		newProductPrice = Other.round(Double.parseDouble(tfNewProductPrice.getText()), 2);
 		
 		return newProductPrice;
 	}

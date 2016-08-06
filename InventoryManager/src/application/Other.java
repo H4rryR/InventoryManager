@@ -30,7 +30,7 @@ public class Other {
 		if (places < 0) throw new IllegalArgumentException();
 		
 		BigDecimal bd = new BigDecimal(price);
-		bd = bd.setScale(places, RoundingMode.HALF_UP); // TODO - There is a possibility that i should be using a different rounding mode.
+		bd = bd.setScale(places, RoundingMode.HALF_UP);
 		
 		return bd.doubleValue(); 
 	}
