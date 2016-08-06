@@ -1,5 +1,8 @@
 package application;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -22,4 +25,13 @@ public class Other {
 		return;
 	}
 	
+	public static double round(double price, int places) {
+		
+		if (places < 0) throw new IllegalArgumentException();
+		
+		BigDecimal bd = new BigDecimal(price);
+		bd = bd.setScale(places, RoundingMode.HALF_UP); // TODO - There is a possibility that i should be using a different rounding mode.
+		
+		return bd.doubleValue(); 
+	}
 }

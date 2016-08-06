@@ -22,42 +22,46 @@ public class SignIn {
 		username = tfUsername.getText();
 		password = pfPassword.getText();
 		
-		System.out.println(usernames);
-		System.out.println(passwords);
-		
-		System.out.println(username);
-		System.out.println(password);
-		
 		for (String user : usernames) {
+			
 			if (user.equals(username)) {
-				usernameAuth = true;	
+				
+				usernameAuth = true;
 			} else {
+				
 				usernameAuth = false;
 			}
 			
 			if (usernameAuth == true) {
+				
 				userIndex = usernames.indexOf(user);
 				break;
 			}
 		}
 		
 		if (passwords.get(userIndex).equals(password)) {
+			
 			passwordAuth = true;	
 		} else {
+			
 			passwordAuth = false;
 		}
 		
 		if (usernameAuth == true && passwordAuth == true) {
+			
 			System.out.println("Username and Password was correct");
 			userSecure = true;
 		} else {
+			
 			System.out.println("Username or Password was incorrect");
 			userSecure = false;
 		}
 		
 		if (userSecure) {
+			
 			lblOtherAlert.setText("Signed in successfully");
 		} else {
+			
 			lblOtherAlert.setText("Username or password was incorrect");
 		}
 		
