@@ -14,7 +14,7 @@ import javafx.fxml.FXML;
 public class Controller {
 
 	@FXML private TextField tfUsername;
-	@FXML private TextField tfSearch;
+//	@FXML private TextField tfSearch;
 	@FXML private TextField tfNewProductName;
 	@FXML private TextField tfNewProductPrice;
 	@FXML private TextField tfNewProductID;
@@ -25,7 +25,7 @@ public class Controller {
 	@FXML private Button btnSignUp;
 	@FXML private Button btnSignIn;
 	@FXML private Button btnSignOut;
-	@FXML private Button btnSearch;
+//	@FXML private Button btnSearch;
 	@FXML private Button btnClear;
 	@FXML private Button btnSubmit;
 	@FXML private Button btnCalculate;
@@ -46,7 +46,7 @@ public class Controller {
 	private ArrayList<String> passwords = new ArrayList<String>();
 	private ObservableList<String> productNamesList;	
 	private boolean userSecure;
-	private String productName;
+//	private String productName;
 	private String newProductName;
 	private double newProductPrice;
 	private String newProductID;
@@ -59,7 +59,7 @@ public class Controller {
 	private Inventory i = new Inventory();
 	private Other o = new Other();
 	
-	@FXML public void initialize() {
+	public void initialize() {
 		
 		lvProductNames.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
 			
@@ -97,16 +97,17 @@ public class Controller {
 		i.calcTotalInventoryValue(lblTotalInventoryValue); 
 	}
 	
-	@FXML public void productNameEntered() {
-		
-		p.getProductName(tfSearch);
-		p.selectProductName(productName);
-	}
-	
-	@FXML public void searchPressed() {
-		
-		p.getProductName(tfSearch);
-	}
+//	@FXML public void productNameEntered() {
+//		
+//		p.getProductName(tfSearch);
+//		p.selectProductName(productName, lblOtherAlert, lvProductNames); //TODO - working on now
+//	}
+//	
+//	@FXML public void searchPressed() {
+//		
+//		p.getProductName(tfSearch);
+//		p.selectProductName(productName, lblOtherAlert, lvProductNames); //TODO - working on now
+//	}
 	
 	@FXML public String newProductNameEntered() {
 		
@@ -143,7 +144,7 @@ public class Controller {
 	
 	@FXML public void clearPressed() {
 		
-		o.clearFields(tfNewProductName, tfNewProductPrice, tfNewProductID, tfNewProductQuantity, tfSearch, lblStoredProductName, 
+		o.clearFields(tfNewProductName, tfNewProductPrice, tfNewProductID, tfNewProductQuantity, lblStoredProductName, 
 				lblStoredProductPrice, lblStoredProductID, lblStoredProductQuantity);
 	}
 }

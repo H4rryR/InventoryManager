@@ -4,23 +4,31 @@ import javafx.scene.control.TextField;
 
 public class Products {
 
-	private String productName;
+//	private String productName;
 	private String newProductName;
 	private double newProductPrice;
 	private String newProductID;
 	private int newProductQuantity;
 		
-	public String getProductName(TextField tfSearch) {
-		
-		productName = tfSearch.getText();
-		
-		return productName;
-	}
-	
-	public void selectProductName(String productName) {
-		
-		return;
-	}
+//	public String getProductName(TextField tfSearch) {
+//		
+//		productName = tfSearch.getText();
+//		
+//		return productName;
+//	}
+//	
+//	public void selectProductName(String productName, Label lblOtherAlert, ListView<String> lvProductNames) { //TODO - working on now
+//		
+//		try {
+//			
+//		} catch (Exception e) {
+//			
+//			System.out.println(productName + " is not in the inventory array list");
+//			lblOtherAlert.setText("The product " + productName + " is not in your inventory");
+//		}
+//		
+//		return;
+//	}
 	
 	public String getNewProductName(TextField tfNewProductName) {
 		
@@ -49,4 +57,5 @@ public class Products {
 		
 		return newProductQuantity;
 	}
+	
 }
